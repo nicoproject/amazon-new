@@ -1,0 +1,14 @@
+UPDATE wp_posts SET post_content = replace(post_content, 'oldurl.com', 'newurl.com');
+
+
+SELECT *  FROM `amazon_new`.`wp_posts` WHERE (CONVERT(`ID` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_author` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_date` USING utf8) LIKE '%%http://www.%%' OR CONVERT(`post_date_gmt` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_content` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_title` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_excerpt` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_status` USING utf8) LIKE '%%http://%%' OR CONVERT(`comment_status` USING utf8) LIKE '%%http://%%' OR CONVERT(`ping_status` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_password` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_name` USING utf8) LIKE '%%http://%%' OR CONVERT(`to_ping` USING utf8) LIKE '%%http://%%' OR CONVERT(`pinged` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_modified` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_modified_gmt` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_content_filtered` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_parent` USING utf8) LIKE '%%http://%%' OR CONVERT(`menu_order` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_type` USING utf8) LIKE '%%http://%%' OR CONVERT(`post_mime_type` USING utf8) LIKE '%%http://%%' OR CONVERT(`comment_count` USING utf8) LIKE '%%http://%%');
+
+201 строка
+
+SELECT * FROM `amazon_new`.`wp_posts` WHERE CONVERT(`post_content` USING utf8) LIKE '%http://%'
+SELECT * FROM `wp_posts` WHERE CONVERT(`post_content` USING utf8) LIKE '%http://%'
+199 строк
+
+UPDATE wp_posts SET post_content = replace(post_content, 'http', 'https');
+
+UPDATE wp_posts SET post_content = replace(post_content, 'httpss://', 'https://');

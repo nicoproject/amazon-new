@@ -1,0 +1,14 @@
+Шрифты для меню:
+Alegreya Sans  - выбрал
+Arimo
+Cuprum
+Montserrat
+Nunito
+Scada
+Ubuntu Condensed
+Yanone Kaffeesatz
+
+Цвета 
+Синий 0A4B96
+Голубой 0091C8
+Зеленый 5AAA78
