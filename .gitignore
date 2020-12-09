@@ -1,3 +1,5 @@
+_dev
+.vscode
 wp-admin/
 wp-includes/
 wp-content/languages

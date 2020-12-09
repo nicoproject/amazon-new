@@ -8,6 +8,14 @@ Scada
 Ubuntu Condensed
 Yanone Kaffeesatz
 
+Выбрал в итоге Raleway:
+https://fonts.google.com/specimen/Raleway
+
+Делал через импорт:
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+</style>
+
 Цвета 
 Синий 0A4B96
 Голубой 0091C8
