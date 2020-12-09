@@ -25,24 +25,6 @@ add_action('wp_enqueue_scripts', 'chld_thm_cfg_parent_css', 10);
 
 // END ENQUEUE PARENT ACTION
 
-/**
- * 
- * Never worry about cache again!
- */
-// function my_load_scripts($hook) {
-
-//   // create my own version codes
-//   $my_js_ver  = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'js/custom.js' ));
-//   $my_css_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'style.css' ));
-
-//   // 
-//   wp_enqueue_script( 'custom_js', plugins_url( 'js/custom.js', __FILE__ ), array(), $my_js_ver );
-//   wp_register_style( 'my_css',    plugins_url( 'style.css',    __FILE__ ), false,   $my_css_ver );
-//   wp_enqueue_style ( 'my_css' );
-
-// }
-// add_action('wp_enqueue_scripts', 'my_load_scripts');
-
 function add_scripts()
 {
   wp_enqueue_script(
@@ -53,3 +35,21 @@ function add_scripts()
 }
 
 add_action('wp_enqueue_scripts', 'add_scripts');
+
+
+function divi_add_page_name_id()
+{
+  $page_name = get_the_title(); // gets the page name/title
+  $page_url = get_permalink(); // gets the page URL
+?>
+  <script>
+    jQuery(document).ready(function($) {
+      $('input[data-original_id="page_name"]').val('<?php echo esc_html($page_name) ?>'); // inserts the page name into the page name field | change the "page_name" to be the id you add in the Divi Contact Module for the Page Name
+      $('input[data-original_id="page_name"]').prop('readonly', true); // stops auto fill from changing the value
+      $('input[data-original_id="page_url"]').val('<?php echo esc_html($page_url) ?>'); // inserts the page url into the page url field | change the "page_url" to be the id you add in the Divi Contact Module for the URL
+      $('input[data-original_id="page_url"]').prop('readonly', true); // stops auto fill from changing the value
+    });
+  </script>
+<?php
+}
+add_action('wp_footer', 'divi_add_page_name_id'); // wordpress action to insert code into the footer of your website

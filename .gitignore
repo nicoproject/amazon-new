@@ -5,5 +5,7 @@ wp-includes/
 wp-content/languages
 wp-content/uploads
 wp-content/plugins
+wp-content/et-cache
 wp-content/themes/twentytwenty
+wp-content/themes/twentytwentyone
 wp-content/themes/Divi

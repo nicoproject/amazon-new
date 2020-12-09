@@ -57,6 +57,23 @@
 
     <?php if ($et_top_info_defined && !$et_slide_header || is_customize_preview()) : ?>
       <?php ob_start(); ?>
+
+      <!-- Callme Popup Form Icon block -->
+      <div class="callme__wrapper">
+        <div class="callme__form">
+
+          <?php echo do_shortcode('
+        [et_pb_section fb_built="1" _builder_version="4.7.4" _module_preset="default"][et_pb_row _builder_version="4.7.4" _module_preset="default"][et_pb_column type="4_4" _builder_version="4.7.4" _module_preset="default"][et_pb_contact_form captcha="off" title="Заказать обратный звонок" custom_message="Name: %%name%%||et_pb_line_break_holder||Phone: %%phone%%||et_pb_line_break_holder||||et_pb_line_break_holder||Submitted on page: %%page_name%%||et_pb_line_break_holder||Page URL: %%page_url%%" success_message="Сообщение отправлено" _builder_version="4.7.4" _module_preset="default" hover_enabled="0" email="nicoproject@ya.ru" sticky_enabled="0"][et_pb_contact_field field_id="name" field_title="Ваше имя" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default"][/et_pb_contact_field][et_pb_contact_field field_id="phone" field_title="Ваш телефон" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default"][/et_pb_contact_field][et_pb_contact_field field_id="page_name" field_title="Page Name" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default" custom_css_main_element="display:none;"][/et_pb_contact_field][et_pb_contact_field field_id="page_url" field_title="Page URL" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default" custom_css_main_element="display: none;"][/et_pb_contact_field][/et_pb_contact_form][/et_pb_column][/et_pb_row][/et_pb_section]
+        ')
+          ?>
+
+          <div class="callme__button">
+            <a href="#mockCallme"> </a>
+          </div>
+
+        </div>
+      </div>
+
       <div id="top-header" <?php echo $et_top_info_defined ? '' : 'style="display: none;"'; ?>>
         <div class="container clearfix">
 
@@ -81,9 +98,9 @@
           ?>
 
           <div class="social-links">
-            <a href="#mockFB" target="_blank" class="social-block__social_link social_link_fb"></a>
-            <a href="#mockIG" target="_blank" class="social-block__social_link social_link_ig"></a>
-            <a href="#mockVK" target="_blank" class="social-block__social_link social_link_vk"></a>
+            <a href="https://www.facebook.com/amazondv" target="_blank" class="social-block__social_link social_link_fb"></a>
+            <a href="https://www.instagram.com/amazon_dv" target="_blank" class="social-block__social_link social_link_ig"></a>
+            <a href="https://vk.com/amazondv" target="_blank" class="social-block__social_link social_link_vk"></a>
           </div>
 
           <div class="top-header__search">
@@ -261,16 +278,59 @@
 
       <div class="mobile-menu__wrapper">
         <div class="mobile_menu__header">
-            <div class="mobile_menu_bar"></div>
+          <!-- Menu Hamburger Icon -->
+          <div class="mobile_menu__bar"></div>
 
+          <!-- Menu Logo -->
           <div class="mobile_menu__logo">
             <a href="<?php echo esc_url(home_url('/')); ?>">
               <img src="<?php echo esc_attr($logo); ?>" alt="<?php echo esc_attr(get_bloginfo('name')); ?>" />
             </a>
           </div>
 
+          <!-- Menu Search Icon -->
+          <div class="mobile_menu__search_icon"></div>
+
+          <!-- Menu Cart Icon -->
+          <div class="mobile_menu__cart_icon">
+            <?php
+            $items_number = WC()->cart->get_cart_contents_count();
+            $url = function_exists('wc_get_cart_url') ? wc_get_cart_url() : WC()->cart->get_cart_url();
+            ?>
+            <?php if ($items_number != 0) : ?>
+              <a href="<?php echo $url ?>" class="mobile_menu__cart_items"><?php echo $items_number ?></a>
+            <?php endif ?>
+          </div>
+
         </div>
+
+        <!-- Mobile sliding search Div -->
+        <div class="mobile_menu__search_wrapper">
+          <form role="search" method="get" class="mobile_menu__search_form" action="<?php echo esc_url(home_url('/')); ?>">
+            <?php
+            printf(
+              '<input type="search" class="mobile_menu__search_field" placeholder="%1$s" value="%2$s" name="s" title="%3$s" />',
+              esc_attr__('Search &hellip;', 'Divi'),
+              get_search_query(),
+              esc_attr__('Search for:', 'Divi')
+            );
+            ?>
+
+            <input type="submit" class="mobile_menu__search_submit" value="Искать">
+            <?php
+            /**
+             * Fires inside the search form element, just before its closing tag.
+             *
+             * @since ??
+             */
+            do_action('et_search_form_fields');
+            ?>
+          </form>
+        </div>
+
+        <!-- Mobile sliding menu Start -->
         <div class="mobile_menu">
+
           <?php
           /** 
            * Displaying mobile menu 
@@ -279,8 +339,36 @@
             'menu' => 469
           ));
           ?>
+
+          <div class="menu-mobile__business-info">
+            <div class="phones-block">
+              <!-- Clean-Carpets AD block -->
+              <div class="clean-carpet">
+                <span>Чистка ковров</span>
+                <span>(4212) 77-40-43</span>
+              </div>
+              <!-- Clean-water AD block -->
+              <div class="clean-water">
+                <span>Фильтры для воды <sup>new</sup></span>
+                <span>+7 914 544-16-17</span>
+              </div>
+              <!-- Clean-Clothes AD block -->
+              <div class="clean-clothes">
+                <span>Химчистка одежды <sup>new</sup></span>
+                <span>(4212) 20-15-96</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/amazondv" target="_blank" class="social-block__social_link social_link_fb"></a>
+            <a href="https://www.instagram.com/amazon_dv" target="_blank" class="social-block__social_link social_link_ig"></a>
+            <a href="https://vk.com/amazondv" target="_blank" class="social-block__social_link social_link_vk"></a>
+          </div>
+
         </div>
       </div>
+      <!-- Mobile sliding menu End -->
 
       <div class="container clearfix et_menu_container">
 
