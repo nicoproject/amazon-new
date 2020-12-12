@@ -1,5 +1,5 @@
 <?php
-
+define('WP_CACHE', true); // WP-Optimize Cache
 /**
  * Основные параметры WordPress.
  *
@@ -18,26 +18,19 @@
  *
  * @package WordPress
  */
-
 // ** Параметры MySQL: Эту информацию можно получить у вашего хостинг-провайдера ** //
 /** Имя базы данных для WordPress */
 define('DB_NAME', 'amazon_new');
-
 /** Имя пользователя MySQL */
 define('DB_USER', 'root');
-
 /** Пароль к базе данных MySQL */
 define('DB_PASSWORD', 'root');
-
 /** Имя сервера MySQL */
 define('DB_HOST', 'localhost');
-
 /** Кодировка базы данных для создания таблиц. */
 define('DB_CHARSET', 'utf8mb4');
-
 /** Схема сопоставления. Не меняйте, если не уверены. */
 define('DB_COLLATE', '');
-
 /**#@+
  * Уникальные ключи и соли для аутентификации.
  *
@@ -55,9 +48,7 @@ define('AUTH_SALT',        '8*uvE1=qw_rgtk.Gq+J^aX1gQ6K;|v| r-!P3l^mad !m2i3mM:c
 define('SECURE_AUTH_SALT', '0zjQiF9H`jAAQmz%jv.>@o(qhV+a0-VT;v&99i@Pn*nCKf~U]%76I*|u{.kd4Ngo');
 define('LOGGED_IN_SALT',   'ch_4d}{Uf;$gj^Wkc^XHq4.mz$C~Nw|yIscF+[/m/2l*%#Z>JSUv{Oq-fRPg?~^/');
 define('NONCE_SALT',       'fX;yO1L7jA/K>S.}LU}*Y=z/YCC[l]FMqnQvd5kJi-LJt:MFo_ZqKBvr7~Kbkzx/');
-
 /**#@-*/
-
 /**
  * Префикс таблиц в базе данных WordPress.
  *
@@ -65,7 +56,6 @@ define('NONCE_SALT',       'fX;yO1L7jA/K>S.}LU}*Y=z/YCC[l]FMqnQvd5kJi-LJt:MFo_Zq
  * разные префиксы. Пожалуйста, указывайте только цифры, буквы и знак подчеркивания.
  */
 $table_prefix = 'wp_';
-
 /**
  * Для разработчиков: Режим отладки WordPress.
  *
@@ -78,13 +68,10 @@ $table_prefix = 'wp_';
  * @link https://ru.wordpress.org/support/article/debugging-in-wordpress/
  */
 define('WP_DEBUG', false);
-
 /* Это всё, дальше не редактируем. Успехов! */
-
 /** Абсолютный путь к директории WordPress. */
 if (!defined('ABSPATH')) {
   define('ABSPATH', __DIR__ . '/');
 }
-
 /** Инициализирует переменные WordPress и подключает файлы. */
 require_once ABSPATH . 'wp-settings.php';

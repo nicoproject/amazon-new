@@ -19,24 +19,115 @@ Updated: 2020-12-07 07:21:31
   }
 }
 
+/********************* Callme popup modal */
+
 .callme__wrapper {
   display: none;
   width: 100%;
-  height: 200px;
-  /* background: red; */
+  height: 100%;
   position: fixed;
   left: 0;
   top: 100px;
-  z-index: 11;
+  z-index: 100000;
+}
+
+.callme__form .et_pb_section,
+.callme__form #et-boc .et_pb_section,
+.callme__form .et_pb_row,
+.callme__form #et-boc .et_pb_row {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.callme__form__close_button {
+  position: absolute;
+  top: 12px;
+  right: 10px;
+  width: 35px;
+  height: 35px;
+  content: '\f335';
+  z-index: 10;
+  cursor: pointer;
+  color: #fff;
+}
+
+.callme__form__close_button > span {
+  font-size: 35px;
 }
 
 .callme__form {
-  width: 450px;
-  height: 300px;
-  margin: 10px auto;
-  background: #0091C8;
-  padding: 18px;
-  border-radius: 20px;
+  position: relative;
+  font-family: 'Raleway', sans-serif;
+  width: 500px;
+  padding: 30px;
+  background: #ffffff;
+  margin: 50px auto;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+  -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+}
+.callme__form .et_pb_contact_main_title {
+  background: #5aaa78;
+  text-transform: uppercase;
+  font-family: 'Raleway', sans-serif;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 100;
+  padding: 20px;
+  margin: -30px -30px 30px -30px;
+}
+.callme__form input[type='text'],
+.callme__form input[type='date'],
+.callme__form input[type='datetime'],
+.callme__form input[type='email'],
+.callme__form input[type='number'],
+.callme__form input[type='search'],
+.callme__form input[type='time'],
+.callme__form input[type='url'],
+.callme__form input[type='password'],
+.callme__form textarea,
+.callme__form select {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  outline: none;
+  display: block;
+  width: 100%;
+  padding: 7px;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  background: transparent;
+  margin-bottom: 10px;
+  font: 16px 'Raleway', sans-serif;
+  height: 45px;
+}
+.callme__form textarea {
+  resize: none;
+  overflow: hidden;
+}
+.callme__form button[type='button'],
+.callme__form button[type='submit'] {
+  background-color: #5aaa78;
+  border: 1px solid #27a0a0;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  padding: 8px 18px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.callme__form input[type='button']:hover,
+.callme__form input[type='submit']:hover {
+  background: linear-gradient(to bottom, #34caca 5%, #30c9c9 100%);
+  background-color: #34caca;
+}
+
+.callme__form .et_pb_button:after {
+  top: 3px;
+  font-size: 25px;
 }
 
 .mobile-menu__wrapper {
@@ -229,6 +320,7 @@ form#searchform {
     left: 0;
     position: absolute;
     top: 23px;
+    cursor: pointer;
   }
 
   .mobile_menu__cart_icon::before {
@@ -266,7 +358,8 @@ form#searchform {
     display: none;
   }
 
-  .callme__wrapper {
+
+  .callme__wrapper_icon {
     position: fixed;
     right: 0;
     bottom: 0;
@@ -275,15 +368,24 @@ form#searchform {
     height: 90px;
   }
 
+  .callme__wrapper {
+    top: 0;
+  }
+
+  .callme__form {
+    width: 100%;
+  }
+
   .callme__button {
     background: rgba(90, 170, 120, 0.7);
     width: 60px;
     height: 60px;
     text-align: center;
     border-radius: 36px;
-    position: relative;
-    bottom: 15px;
-    left: 20px;
+    position: fixed;
+    left: 15px;
+    z-index: 1000000;
+    cursor: pointer;
   }
   .callme__button::before {
     position: absolute;

@@ -59,16 +59,23 @@
       <?php ob_start(); ?>
 
       <!-- Callme Popup Form Icon block -->
+      <div class="callme__button">
+        <a href="#mockCallme"> </a>
+      </div>
+
+
       <div class="callme__wrapper">
         <div class="callme__form">
+          <div class="callme__form__close_button"><span class="dashicons dashicons-no-alt"></span></div>
 
           <?php echo do_shortcode('
-        [et_pb_section fb_built="1" _builder_version="4.7.4" _module_preset="default"][et_pb_row _builder_version="4.7.4" _module_preset="default"][et_pb_column type="4_4" _builder_version="4.7.4" _module_preset="default"][et_pb_contact_form captcha="off" title="Заказать обратный звонок" custom_message="Name: %%name%%||et_pb_line_break_holder||Phone: %%phone%%||et_pb_line_break_holder||||et_pb_line_break_holder||Submitted on page: %%page_name%%||et_pb_line_break_holder||Page URL: %%page_url%%" success_message="Сообщение отправлено" _builder_version="4.7.4" _module_preset="default" hover_enabled="0" email="nicoproject@ya.ru" sticky_enabled="0"][et_pb_contact_field field_id="name" field_title="Ваше имя" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default"][/et_pb_contact_field][et_pb_contact_field field_id="phone" field_title="Ваш телефон" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default"][/et_pb_contact_field][et_pb_contact_field field_id="page_name" field_title="Page Name" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default" custom_css_main_element="display:none;"][/et_pb_contact_field][et_pb_contact_field field_id="page_url" field_title="Page URL" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default" custom_css_main_element="display: none;"][/et_pb_contact_field][/et_pb_contact_form][/et_pb_column][/et_pb_row][/et_pb_section]
+        [et_pb_section fb_built="1" _builder_version="4.7.4" _module_preset="default"][et_pb_row _builder_version="4.7.4" _module_preset="default"][et_pb_column type="4_4" _builder_version="4.7.4" _module_preset="default"][et_pb_contact_form captcha="off" email="nicoproject@ya.ru" title="Заказать обратный звонок" custom_message="Поступил заказ на обратный звонок||et_pb_line_break_holder||==========||et_pb_line_break_holder||Имя: %%name%%||et_pb_line_break_holder||Телефон: %%phone%%||et_pb_line_break_holder||||et_pb_line_break_holder||Отправлено со страницы: %%page_name%%||et_pb_line_break_holder||URL: %%page_url%%||et_pb_line_break_holder||===========" success_message="Благодарим за обращение, мы свяжемся с Вами в ближайшее время." _builder_version="4.7.5" _module_preset="default" hover_enabled="0" sticky_enabled="0"][et_pb_contact_field field_id="name" field_title="Ваше имя" fullwidth_field="on" _builder_version="4.7.5" _module_preset="default" hover_enabled="0" sticky_enabled="0"][/et_pb_contact_field][et_pb_contact_field field_id="phone" field_title="Ваш телефон" fullwidth_field="on" _builder_version="4.7.5" _module_preset="default" hover_enabled="0" allowed_symbols="numbers" sticky_enabled="0"][/et_pb_contact_field][et_pb_contact_field field_id="page_name" field_title="Page Name" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default" custom_css_main_element="display:none;"][/et_pb_contact_field][et_pb_contact_field field_id="page_url" field_title="Page URL" fullwidth_field="on" _builder_version="4.7.4" _module_preset="default" custom_css_main_element="display: none;"][/et_pb_contact_field][/et_pb_contact_form][/et_pb_column][/et_pb_row][/et_pb_section]
         ')
           ?>
 
-          <div class="callme__button">
-            <a href="#mockCallme"> </a>
+          <div class="callme__form_license">
+            <p>Заполняя форму, Вы соглашаетесь с <a href="https://amazon-new/politika-zashhity-i-obrabotki-personalnyh-dannyh-ooo-amazon/" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a> и даете согласие на <a href="https://amazon-new/polzovatelskoe-soglashenie/" target="_blank" rel="noopener noreferrer">обработку персональных данных</a>
+            </p>
           </div>
 
         </div>
@@ -104,6 +111,7 @@
           </div>
 
           <div class="top-header__search">
+            
             <?php get_search_form(); ?>
           </div>
 
