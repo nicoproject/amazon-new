@@ -21,7 +21,7 @@ jQuery(document).ready(function ($) {
     $('.mobile_menu').css('height', $(window).height())
     $('.callme__button').css(
       'top',
-      $(window).height() - $('.callme__button').height() - 20,
+      $(window).height() - $('.callme__button').height() - 20
     )
   })
 
@@ -31,13 +31,6 @@ jQuery(document).ready(function ($) {
   $('.callorder_form form').submit(function (event) {
     ym(6431896, 'reachGoal', 'CALL_ORDER')
     console.log('CALL_ORDER GOAL')
-  })
-
-  console.log($('.callme__form'), 'fkn jquery')
-
-  $('.callme__form').click(() => {
-    ym(6431896, 'reachGoal', 'CALL_ORDER')
-    console.log('CALL_ORDER goal reached')
   })
 
   $('.et_pb_contact_form')

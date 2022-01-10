@@ -6,8 +6,8 @@ Author: Elegant Themes
 Author URI: http://www.elegantthemes.com
 Description: Smart. Flexible. Beautiful. Divi is the most powerful theme in our collection.
 Tags: responsive-layout,one-column,two-columns,three-columns,four-columns,left-sidebar,right-sidebar,custom-background,custom-colors,featured-images,full-width-template,post-formats,rtl-language-support,theme-options,threaded-comments,translation-ready
-Version: 4.7.6
-Updated: 2020-12-14
+Version: 4.7.4.1607314891
+Updated: 2020-12-07 07:21:31
 
 */
 
@@ -250,11 +250,9 @@ form#searchform {
   position: absolute;
   display: flex;
   flex-flow: column nowrap;
-  width: 360px;
-  right: 0;
+  width: 100%;
   padding: 5px;
   align-items: flex-end;
-  z-index: 1;
 }
 
 .phones-block {

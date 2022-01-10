@@ -352,7 +352,7 @@
               <!-- Clean-Carpets AD block -->
               <div class="clean-carpet">
                 <span>Чистка ковров</span>
-                <span>(4212) 20-66-50</span>
+                <span>(4212) 20-15-96</span>
               </div>
               <!-- Clean-water AD block -->
               <div class="clean-water">
@@ -384,7 +384,7 @@
             <!-- Clean-Carpets AD block -->
             <div class="clean-carpet">
               <span>Чистка ковров</span>
-              <span>(4212) 20-66-50</span>
+              <span>(4212) 20-15-96</span>
             </div>
             <!-- Clean-water AD block -->
             <div class="clean-water">
