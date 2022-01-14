@@ -3,13 +3,13 @@ _dev
 wp-admin/
 wp-includes/
 wp-content/cache
-wp-content/mu-plugins
+wp-content/et-cache
 wp-content/languages
+wp-content/mu-plugins
 wp-content/uploads
 wp-content/plugins
-wp-content/et-cache
 wp-content/upgrade
-wp-content/wf-logs
+wp-content/wflogs
 wp-content/wpo-cache
 wp-content/themes/twentytwenty
 wp-content/themes/twentytwentyone
