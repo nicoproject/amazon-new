@@ -12,6 +12,7 @@ Updated: 2020-12-14
 */
 
 @import './assets/css/fonts.css';
+@import './assets/css/antiseptics.css';
 
 @media screen and (min-width: 981px) {
   #main-header.et-fixed-header {
