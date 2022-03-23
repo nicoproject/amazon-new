@@ -507,6 +507,11 @@
           <span class="et_close_search_field"></span>
         </div>
       </div>
+      <div class="anticeptics-banner">
+        <div class="container">
+          <a class="anticeptics-banner__text-link" href="/product-category/dezinfektsiya/antiseptiki-i-sanitajzery/">эффективные антисептики и антибактериальное мыло, свое производство, выгодные цены</a>
+        </div>
+      </div>
     </header> <!-- #main-header -->
     <?php
     $main_header = ob_get_clean();
