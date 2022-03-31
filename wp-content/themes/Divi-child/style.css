@@ -224,7 +224,6 @@ form#searchform {
   position: absolute;
   display: inline-flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
   width: 210px;
   top: 3px;
 }

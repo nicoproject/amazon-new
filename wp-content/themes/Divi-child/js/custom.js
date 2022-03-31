@@ -33,30 +33,20 @@ jQuery(document).ready(function ($) {
     console.log('CALL_ORDER GOAL')
   })
 
-  console.log($('.callme__form'), 'fkn jquery')
-
-  $('.callme__form').click(() => {
-    ym(6431896, 'reachGoal', 'CALL_ORDER')
-    console.log('CALL_ORDER goal reached')
-  })
-
   $('.et_pb_contact_form')
     .not('.callorder_form .et_pb_contact_form')
     .submit(function (event) {
       ym(6431896, 'reachGoal', 'CONTACT_FORM')
       console.log('CONTACT_FORM GOAL')
     })
-
-  $('.cart').submit(function (event) {
-    ym(6431896, 'reachGoal', 'PRODUCT_ADDED')
-  })
-  $('.social_link_fb').click(function () {
-    ym(6431896, 'reachGoal', 'PEREHOD_FB')
-  })
-  $('.social_link_ig').click(function () {
-    ym(6431896, 'reachGoal', 'PEREHOD_IG')
-  })
-  $('.social_link_vk').click(function () {
-    ym(6431896, 'reachGoal', 'PEREHOD_VK')
+    
+    $('form.cart').submit(function (event) {
+      ym(6431896, 'reachGoal', 'PRODUCT_ADDED')
+      console.log('PRODUCT_ADDED GOAL')
+    })
+    
+    $('.social_link_vk').click(function () {
+      ym(6431896, 'reachGoal', 'PEREHOD_VK')
+      console.log('PEREHOD_VK GOAL')
   })
 })
