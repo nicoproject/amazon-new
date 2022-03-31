@@ -104,8 +104,6 @@
           ?>
 
           <div class="social-links">
-            <a href="https://www.facebook.com/amazondv" target="_blank" class="social-block__social_link social_link_fb"></a>
-            <a href="https://www.instagram.com/amazon_dv" target="_blank" class="social-block__social_link social_link_ig"></a>
             <a href="https://vk.com/amazondv" target="_blank" class="social-block__social_link social_link_vk"></a>
           </div>
 
