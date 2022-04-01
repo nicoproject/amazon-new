@@ -211,6 +211,7 @@ form#searchform {
 .et_header_style_left #et-top-navigation,
 .et_header_style_split #et-top-navigation {
   padding-top: 11px;
+  padding-left: 178px !important;
 }
 
 #top-menu a {
